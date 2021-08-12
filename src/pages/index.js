@@ -32,16 +32,30 @@ export default function Home({ products }) {
 
 export async function getServerSideProps(context) {
   const session = await getSession(context);
-  const products = await fetch("https://fakestoreapi.com/products").then(
-    (res) => res.json()
-  );
+  // const products = await fetch("https://fakestoreapi.com/products").then(
+  //   (res) => res.json()
+  // );
   const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
   
-  const prices = await stripe.prices.list({
+  const pricesList = await stripe.prices.list({
     limit: 10,
   });
+  const productsList = await stripe.products.list();
+  const products = []
+  
+  productsList.data.forEach( p => {
+    const price = pricesList.data.find( price => price.product == p.id);
+    products.push({ 
+      id: p.id,
+      title: p.name,
+      price: price.unit_amount,
+      quantity : 2,
+      description: p.description,
+      category: p.metadata.category ? p.metadata.category : '' ,
+      image: p.images[0],
+    })
+  })
 
-  const productList = await stripe.products.retrieve();
 
   return {
     props: {

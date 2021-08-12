@@ -43,13 +43,13 @@ const CheckoutProduct = ({
           <Currency
             currency="BRL"
             group=","
-            quantity={Math.round(price * 72.91)}
+            quantity={Math.round(price)/100}
           />{" "}
           {" x"} {quantity} {" = "}
           <Currency
             currency="BRL"
             group=","
-            quantity={Math.round(price * quantity * 72.91)}
+            quantity={Math.round(price * quantity)/100}
           />
         </div>
       </div>

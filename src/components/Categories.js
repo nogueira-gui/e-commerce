@@ -13,8 +13,8 @@ const Categories = ({ setValue }) => {
       <p onClick={(e) => setValue("jewelery")} className="link">
         Joias
       </p>
-      <p onClick={(e) => setValue("electronics")} className="link">
-        Eletronicos
+      <p onClick={(e) => setValue("vestido")} className="link">
+        Vestidos
       </p>
       <p onClick={(e) => setValue("body")} className="link">
         Body

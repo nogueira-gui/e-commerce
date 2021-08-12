@@ -4,6 +4,7 @@ module.exports = {
       "fakestoreapi.com",
       "www.designfreelogoonline.com",
       "s3.envato.com",
+      "files.stripe.com",
     ],
   },
   env: {

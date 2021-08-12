@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { addToBasket } from "../slices/basketSlice";
 
 const MAX_RATING = 5;
-const MIN_RATING = 1;
+const MIN_RATING = 3;
 
 const Product = ({
   id,
@@ -66,7 +66,7 @@ const Product = ({
         <Currency
           currency="BRL"
           group=","
-          quantity={Math.round(price)} //entrar com price do stripe
+          quantity={(price)/100} //entrar com price do stripe
         />
       </div>
 

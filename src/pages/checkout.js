@@ -92,7 +92,7 @@ const Checkout = () => {
                 Subtotal ({totalItems} items):{" "}
                 <span className="font-bold">
                   <Currency
-                    quantity={Math.round(total * 72.91)}
+                    quantity={Math.round(total)/100}
                     currency="BRL"
                     group=","
                   />
