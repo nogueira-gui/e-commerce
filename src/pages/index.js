@@ -35,7 +35,7 @@ export async function getServerSideProps(context) {
   // const products = await fetch("https://fakestoreapi.com/products").then(
   //   (res) => res.json()
   // );
-  const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+  const stripe = require("stripe")(process.env.stripe_secret_key);
   
   const pricesList = await stripe.prices.list({
     limit: 10,
