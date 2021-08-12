@@ -50,7 +50,7 @@ export async function getServerSideProps(context) {
       title: p.name,
       price: price.unit_amount,
       quantity : 2,
-      description: p.description,
+      description: p.description ? p.description : ' ',
       category: p.metadata.category ? p.metadata.category : '' ,
       image: p.images[0],
     })

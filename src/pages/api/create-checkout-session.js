@@ -18,16 +18,16 @@ export default async (req, res) => {
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
-    shipping_rates: ["shr_1IwPysSCcFGNqofHiAQsTfdz"],
+    // shipping_rates: ["shr_1IwPysSCcFGNqofHiAQsTfdz"], //valor do frete
     shipping_address_collection: {
       allowed_countries: ["BR"],
     },
     line_items: stripeItems,
     mode: "payment",
-    success_url: `${req.headers.origin}/?success=true&session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${req.headers.origin}/?canceled=true`,
-    // success_url: `${process.env.HOST}/success`,
-    // cancel_url: `${process.env.HOST}/checkout`,
+    success_url: `${req.headers.origin}/success`,
+    cancel_url: `${req.headers.origin}/checkout`,
+    // success_url: `${process.env.host}/success`,
+    // cancel_url: `${process.env.host}/checkout`,
     metadata: {
       email,
       images: JSON.stringify(items.map((item) => item.image)),
