@@ -1,13 +1,13 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAzE6N9zeeYVtqeApK9VJvXMaNKWL9AVJM",
-  authDomain: "feminuzstore.firebaseapp.com",
-  projectId: "feminuzstore",
-  storageBucket: "feminuzstore.appspot.com",
-  messagingSenderId: "688752193583",
-  appId: "1:688752193583:web:d6d3824109d377729dd6da",
-  measurementId: "G-6K2CN4WMWY"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID,
 };
 
 const app = !firebase.apps.length
