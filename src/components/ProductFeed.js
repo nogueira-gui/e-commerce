@@ -11,12 +11,13 @@ const ProductFeed = ({ products, search, value }) => {
               ) && product.category === value
           )
           .slice(initial, final)
-          .map(({ id, title, price, description, category, image }) => (
+          .map(({ id, title, price, priceId, description, category, image }) => (
             <Product
               key={id}
               id={id}
               category={category}
               price={price}
+              priceId={priceId}
               description={description}
               title={title}
               image={image}
@@ -29,12 +30,13 @@ const ProductFeed = ({ products, search, value }) => {
             )
           )
           .slice(initial, final)
-          .map(({ id, title, price, description, category, image }) => (
+          .map(({ id, title, price, priceId, description, category, image }) => (
             <Product
               key={id}
               id={id}
               category={category}
               price={price}
+              priceId={priceId}
               description={description}
               title={title}
               image={image}

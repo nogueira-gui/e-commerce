@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { StarIcon } from "@heroicons/react/solid";
 import Currency from "react-currency-formatter";
 import { useDispatch } from "react-redux";
-
 import { addToBasket } from "../slices/basketSlice";
 
 const MAX_RATING = 5;
@@ -13,12 +13,15 @@ const Product = ({
   id,
   title,
   price,
+  priceId,
   quantity,
   description,
   category,
   image,
 }) => {
   const dispatch = useDispatch();
+
+  const router = useRouter();
 
   const [rating] = useState(
     //Inserir rating via Firestore
@@ -30,6 +33,7 @@ const Product = ({
       id,
       title,
       price,
+      priceId,
       quantity: 1,
       rating,
       description,
@@ -46,10 +50,13 @@ const Product = ({
       <p className="absolute top-2 right-2 text-xs italic text-gray-400">
         {category}
       </p>
-
-      <Image src={image} height={200} width={200} objectFit="contain" />
-
-      <h4 className="my-3">{title}</h4>
+      <div onClick={() => router.push({
+                    pathname: `/product`, 
+                    query:{priceId},
+                  }) }>
+        <Image src={image} height={200} width={200} objectFit="contain" />
+        <h4 className="my-3">{title}</h4>
+      </div>
       <div className="flex">
         {Array(rating)
           .fill()

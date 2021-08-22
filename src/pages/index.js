@@ -45,17 +45,18 @@ export async function getServerSideProps(context) {
   
   productsList.data.forEach( p => {
     const price = pricesList.data.find( price => price.product == p.id);
+
     products.push({ 
       id: p.id,
       title: p.name,
       price: price.unit_amount,
+      priceId: price.id,
       quantity : 2,
       description: p.description ? p.description : ' ',
       category: p.metadata.category ? p.metadata.category : '' ,
       image: p.images[0],
     })
   })
-
 
   return {
     props: {
