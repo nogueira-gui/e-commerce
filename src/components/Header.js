@@ -17,7 +17,7 @@ const Header = ({ search, setSearch }) => {
         <div className="flex items-center flex-grow sm:flex-grow-0">
           <Image
             onClick={() => router.push("/")}
-            src="https://www.designfreelogoonline.com/wp-content/uploads/2016/07/000749-online-store-logos-design-free-online-E-commerce-cart-logo-maker-02.png"
+            src="/logo.png"
             width={50}
             height={40}
             objectFit="contain"

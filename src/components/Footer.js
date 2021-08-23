@@ -22,16 +22,16 @@ const Footer = () => {
       </button>
       <div className="border-[0.5px] border-amazon_blue-light w-full" />
       <h4 className="text-sm  text-white sm:mt-11 mt-7 absolute bottom-16">
-        Developed by Souvik Nath
+        Developed by Guilherme Nogueira
       </h4>
       <div className="flex mt-5 space-x-5 text-white absolute bottom-6">
         <GitHubIcon
-          onClick={() => router.push("https://github.com/souviknsl07")}
+          onClick={() => router.push("https://github.com/nogueira-gui")}
           className="link"
         />
         <FacebookIcon
           onClick={() =>
-            router.push("https://www.facebook.com/souvik.nath.12914")
+            router.push("https://www.facebook.com/")
           }
           className="link"
         />
