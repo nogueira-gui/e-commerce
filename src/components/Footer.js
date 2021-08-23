@@ -31,18 +31,18 @@ const Footer = () => {
         />
         <FacebookIcon
           onClick={() =>
-            router.push("https://www.facebook.com/")
+            router.push("https://www.facebook.com/guilherme.nogueirasilva.1")
           }
           className="link"
         />
         <LinkedInIcon
           onClick={() =>
-            router.push("https://www.linkedin.com/in/souvik-nath-6b35691b0")
+            router.push("https://www.linkedin.com/in/guilherme-nogueira-6a310096/")
           }
           className="link"
         />
         <InstagramIcon
-          onClick={() => router.push("https://www.instagram.com/iamsouviknath")}
+          onClick={() => router.push("https://www.instagram.com/gui.r13")}
           className="link"
         />
       </div>
