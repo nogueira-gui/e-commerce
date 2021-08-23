@@ -17,6 +17,7 @@ export default function Home({ products }) {
       <Head>
         <title>E-commerce</title>
         <link rel="icon" href="/images.png" />
+        <link rel="stylesheet" type="text/css" href="../styles/nprogress.css"/>
       </Head>
       <Header search={search} setSearch={setSearch} />
       <Categories setValue={setValue} />
