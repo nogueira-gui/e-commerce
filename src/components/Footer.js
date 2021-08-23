@@ -37,7 +37,7 @@ const Footer = () => {
         />
         <LinkedInIcon
           onClick={() =>
-            router.push("https://www.linkedin.com/in/guilherme-nogueira-6a310096/")
+            router.push("https://www.linkedin.com/in/guilherme-nogueira-s/")
           }
           className="link"
         />
