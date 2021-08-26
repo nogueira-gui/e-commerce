@@ -30,7 +30,7 @@ const Header = ({ search, setSearch }) => {
             onChange={(e) => setSearch(e.target.value)}
             value={search}
             type="search"
-            className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4"
+            className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md dark:bg-white dark:text-black focus:outline-none px-4"
           />
           <SearchIcon className="h-12 p-4" />
         </div>
