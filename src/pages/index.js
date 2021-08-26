@@ -16,7 +16,7 @@ export default function Home({ products }) {
     <div className="bg-gray-100 dark:bg-amazon_blue-light">
       <Head>
         <title>E-commerce</title>
-        <link rel="icon" href="/images.png" />
+        <link rel="icon" href="/logo.png" />
         <link rel="stylesheet" type="text/css" href="../styles/nprogress.css"/>
       </Head>
       <Header search={search} setSearch={setSearch} />
